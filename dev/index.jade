@@ -1,34 +1,36 @@
 doctype html
 html(lang="ja")
-head
-  meta(charset="UTF-8")
-  link(rel="stylesheet", href="css/style.css")
-  script(src="js/script.js")
-  title まい速 - 毎日新聞をもっと楽しく。
-body
-  header
-    nav
-      span.bar
-      span.bar
-      span.bar
-    h1 最新(カテゴリ名 or タイトル)
-  aside
-    h4 MENU
-    ul
-      - for (var i = 0; i < 10; i++){
-      li
-        a(href="#") 最新
-      -}
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+    link(rel="stylesheet", href="css/style.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="js/script.js")
+    title まい速 - 毎日新聞をもっと楽しく。
+  body
+    header
+      nav
+        span.bar
+        span.bar
+        span.bar
+      h1 最新(カテゴリ名 or タイトル)
+    aside
+      h4 MENU
+      ul
+        - for (var i = 0; i < 10; i++){
+        li
+          a(href="#") 最新
+        -}
 
-  #main
-    img(src="#", alt="まい速");
+    #main
+      img(src="#", alt="まい速")
 
-  section#viewList
-    //- slide show news list
+    section#viewList
+      //- slide show news list
 
-  aritcle
-    ul
-      - for (var i = 0; i < 10; i++){
-      li
-        a(href="#") 暇を持て余した兵士たちの遊びｗｗｗｗｗｗ
-      -}
+    aritcle
+      ul
+        - for (var i = 0; i < 10; i++){
+        li
+          a(href="#") 暇を持て余した兵士たちの遊びｗｗｗｗｗｗ
+        -}
