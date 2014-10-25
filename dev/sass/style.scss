@@ -2,10 +2,15 @@
 @import "compass/reset";
 @import "compass";
 
-$main: #E17F3B;
+$main: rgba(288, 122, 49, 1);
 $white: #ffffff;
 $black: #343434;
 $gray: #F8F7F6;
+$fontColor:#CD4500;
+
+%clearfix{
+  @include clearfix();
+}
 
 html,body{
   font-size: 13px;
@@ -99,6 +104,10 @@ aside{
   }
 }
 
+.wrapper{
+  width: 95%;
+  margin: 0 auto;
+}
 #wrapper{
   width: 95%;
   margin: 0 auto;
@@ -135,6 +144,156 @@ aside{
           @include border-radius(8px 8px 0 0);
         }
       }
+    }
+  }
+}
+
+#singleArticle{
+  width: 100%;
+  #articleInfo{
+    display: inline-block;
+    margin-bottom: 20px;
+    h3{
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      word-break: break-all;
+    }
+    ul{
+      @extend %clearfix;
+      li{
+        float: left;
+        &+li{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  #articleImage{
+    width: 100%;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  #articleBody{
+    #maisokuTitle{
+      font-size: 15px;
+      color: $fontColor;
+      margin-bottom: 10px;
+    }
+    #read,
+    #moreRead{
+      line-height: 150%;
+      margin-bottom: 20px;
+      word-break: break-all;
+    }
+  }
+  #articleComment{
+    width: 100%;
+    background-color: $gray;
+    padding-bottom: 20px;
+    h4{
+      height: 40px;
+      line-height: 40px;
+      background-color: $main;
+      text-indent: 1em;
+      color: $white;
+      font-size: 15px;
+    }
+    ul{
+      width: 100%;
+      li{
+        @include box-sizing(border-box);
+        padding: 10px;
+        border-bottom: solid 1px $main;
+        h5{
+          font-size: 15px;
+          color: $fontColor;
+          float: left;
+          margin-bottom: 10px;
+        }
+        time{
+          float: right;
+        }
+        p{
+          clear: both;
+        }
+      }
+    }
+    form{
+      margin-top: 20px;
+      div{
+        input[type="text"],
+        input[type="submit"]{
+          @include box-sizing(border-box);
+          @include border-radius(4px);
+          @include appearance(none);
+        }
+        input[type="text"]{
+          border: solid 1px $black;
+        }
+        input[type="submit"]{
+          display: inline-block;
+          width: 100%;
+          border: none;
+          background-color: $main;
+          color: $white;
+          height: 30px;
+          line-height: 30px;
+          font-size: 18px;
+        }
+        textarea{
+          @include box-sizing(border-box);
+          width: 100%;
+          height: 50px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          @include border-radius(4px);
+        }
+      }
+    }
+  }
+  .recommend,.recommendText{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    ul{
+      li{
+        width: 100%;
+        @include box-sizing(border-box);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px $main  ;
+        a{
+          display: inline-block;
+          @extend %clearfix;
+          div{
+            display: inline-block;
+            width: 30%;
+            float: left;
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+          h5{
+            float: right;
+            width: 60%;
+            word-break: break-all;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  .recommendText{
+    ul li a h5{
+      width: 100%;
+      font-size: 13px !important;
+      color: $black !important;
     }
   }
 }

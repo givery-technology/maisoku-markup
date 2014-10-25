@@ -1,0 +1,85 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+    link(rel="stylesheet", href="css/style.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="js/script.js")
+    title まい速 - 毎日新聞をもっと楽しく。
+  body
+    header
+      nav#icon
+        span.bar
+        span.bar
+        span.bar
+      h1 まい速
+    aside
+      ul
+        li
+          a(href="#") 最新
+        li
+          a(href="#") 政治
+        li
+          a(href="#") 経済
+        li
+          a(href="#") 国際
+        li
+          a(href="#") 社会
+        li
+          a(href="#") スポーツ
+        li
+          a(href="#") コラム
+      time
+        |2014年10月25日
+
+    article#singleArticle
+      #wrapper
+        #articleInfo
+          h3 titletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitle
+          ul
+            li 1280 views
+            li 28 コメント
+      #articleImage
+        img(src="images/photo.png", alt="photo")
+      #articleBody
+        .wrapper
+          h4#maisokuTitle maisoku Title
+          p#read
+            |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .recommendText
+            .wrapper
+              ul
+                -for (var i = 0; i < 3; i++){
+                li
+                  a(href="#")
+                    h5.recommendTitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                -}
+          p#moreRead
+            |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      #articleComment
+        h4 コメント
+        ul
+          li
+            h5 user Name
+            time 1時間前
+            p コメント
+        form(action="#",method="post")
+          .wrapper
+            div
+              |名前：
+              input(type="text", name="name")
+            div
+              textarea(name="comment", cols="30", rows="10")
+            div
+              input(type="submit", value="コメントする")
+      .recommend
+        .wrapper
+          ul
+            -for (var i = 0; i < 5; i++){
+            li
+              a(href="#")
+                div
+                  img(src="images/photo.png", alt="photo")
+                h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            -}
