@@ -3,7 +3,7 @@ $ ->
   $("#icon").click ->
     console.log $(this).hasClass("active")
     if $(this).hasClass("active")
-      $("aside").css({"right":"-200px"});
+      $("aside").css({"right":"-250px"});
     else
       $("aside").css({"right":"0"});
 
