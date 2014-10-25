@@ -75,8 +75,10 @@ header {
   top: 0;
   z-index: 200;
 }
-header h1 {
-  font-size: 15px;
+header h1 img {
+  width: auto;
+  margin-top: 2.5px;
+  height: 35px;
 }
 header nav#icon {
   -moz-box-sizing: border-box;
@@ -169,6 +171,14 @@ aside ul li a {
   text-align: center;
   color: #ffffff;
   text-decoration: none;
+}
+aside #mainichiLogo {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+aside #mainichiLogo img {
+  width: 60%;
 }
 
 .wrapper {

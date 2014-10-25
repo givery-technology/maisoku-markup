@@ -28,7 +28,11 @@ header{
   top: 0;
   z-index: 200;
   h1{
-    font-size: 15px;
+    img{
+      width: auto;
+      margin-top: 2.5px;
+      height: 35px;
+    }
   }
   nav#icon{
     @include box-sizing(border-box);
@@ -100,6 +104,14 @@ aside{
         color: $white;
         text-decoration: none;
       }
+    }
+  }
+  #mainichiLogo{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    img{
+      width: 60%;
     }
   }
 }
