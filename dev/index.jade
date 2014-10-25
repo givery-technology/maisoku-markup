@@ -4,33 +4,47 @@ html(lang="ja")
     meta(charset="UTF-8")
     meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
     link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/jquery.bxslider.css")
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="js/masonry.pkgd.min.js")
     script(src="js/script.js")
     title まい速 - 毎日新聞をもっと楽しく。
   body
     header
-      nav
+      nav#icon
         span.bar
         span.bar
         span.bar
-      h1 最新(カテゴリ名 or タイトル)
+      h1 まい速
     aside
-      h4 MENU
       ul
-        - for (var i = 0; i < 10; i++){
         li
           a(href="#") 最新
-        -}
-
-    #main
-      img(src="#", alt="まい速")
-
-    section#viewList
-      //- slide show news list
-
-    aritcle
-      ul
-        - for (var i = 0; i < 10; i++){
         li
-          a(href="#") 暇を持て余した兵士たちの遊びｗｗｗｗｗｗ
-        -}
+          a(href="#") 政治
+        li
+          a(href="#") 経済
+        li
+          a(href="#") 国際
+        li
+          a(href="#") 社会
+        li
+          a(href="#") スポーツ
+        li
+          a(href="#") コラム
+      time
+        |2014年10月25日
+
+    #wrapper
+      #articleArea
+        - for (var i = 0; i < 10; i++){
+        article.item
+          a(href="#")
+            h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            time 10/25
+        article.item
+          a(href="#")
+            img(src="images/photo.png", alt="photo")
+            h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            time 10/25
+        - }
